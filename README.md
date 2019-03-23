@@ -1,4 +1,4 @@
-#Markovchain
+# Markovchain
 1. Extract
 2. open folder in Intellij
 3. navigate to src/main/java
