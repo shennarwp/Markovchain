@@ -3,6 +3,7 @@ import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Scanner;
  * @author Shenna RWP
  * @author Agra Bimantara
  */
-public class Markov
+public class Main
 {
 	private static Scanner scanner = new Scanner(System.in);
 
@@ -41,7 +42,6 @@ public class Markov
 			System.out.println("n = " + r + "\t\tP = " + endVector);
 		}
 		System.out.println("startvector: " + start);
-
 	}
 
 	/**
@@ -138,6 +138,11 @@ public class Markov
 				runTestSpiel();
 				System.out.println("----------------------------------------------\n");
 				break;
+			case 4:
+				PixelGrid application = new PixelGrid();
+				application.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				System.out.println("----------------------------------------------\n");
+				break;
 			case 0 :
 				System.out.println("program end.");
 				System.out.println("----------------------------------------------\n");
@@ -160,6 +165,7 @@ public class Markov
 			System.out.println("1. Run transition matrix from aufgabe 1 (Leitung)");
 			System.out.println("2. Enter custom matrix");
 			System.out.println("3. Run transition matrix from aufgabe 2 (Würfelspiel)");
+			System.out.println("4. Diffusion process from aufgabe 3");
 			System.out.println("0. end");
 			System.out.println("----------------------------------------------\n");
 			func = scanner.nextInt();
@@ -172,7 +178,7 @@ public class Markov
 	 * @param args null
 	 */
 	public static void main(String[] args) {
-		//new Markov().start();
-		new Markov().runTestSpiel();
+		new Main().start();
+		//new Main().runTestSpiel();
 	}
 }

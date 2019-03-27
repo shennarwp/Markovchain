@@ -2,7 +2,14 @@ import lombok.Getter;
 
 import java.util.Random;
 
-
+/**
+ * this class is used for recalculating the position of the current drop based on
+ * probabilities and rules explained in the exercise, the class only has 2 int attribute,
+ * indicating its x,y position in the 10x10 grid
+ *
+ * @author Shenna RWP
+ * @author Agra Bimantara
+ */
 class Diffusion
 {
 	private Random random;
@@ -11,13 +18,19 @@ class Diffusion
 	@Getter
 	private int currentColumn;
 
-
+	/**
+	 * constructor
+	 */
 	Diffusion() {
 		currentColumn = (int)(Math.random() * ((10 - 1) + 1)) + 1;
 		currentRow = 1;
 		random = new Random();
 	}
 
+	/**
+	 * recalculate the position based on rules in the exercise
+	 * and then updating the x, y position in the attribute
+	 */
 	void calculatePosition() {
 		if (currentColumn == 1) {							//LEFT EDGE
 			if (currentRow == 10) {							//BOTTOM + LEFT EDGE
