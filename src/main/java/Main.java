@@ -41,7 +41,7 @@ public class Main
 			}
 			System.out.println("n = " + r + "\t\tP = " + endVector);
 		}
-		System.out.println("startvector: " + start);
+		System.out.println("startvector: " + start + "\n");
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class Main
 				, false
 		);
 
-		System.out.println("calculation of probabilities after 1000 runs for each state as start:");
+		System.out.println("calculation of probabilities P after 1000 runs for each state as start:");
 		//Startguthaben als Zustände, startguthaben = i-1
 		int[] starts = new int[] {1,2,3,4,5,6};
 		for(Integer i : starts)
@@ -81,6 +81,7 @@ public class Main
 				, false
 		);
 
+		System.out.println("calculation of probabilities P after 1,2,3,10,20,30,100,200,300 runs for each state as start:");
 		//i = 1 Leitung frei, i = 2 Leitung besetzt, i = 3 Leitung in Wartung
 		int[] starts = new int[] {1,2,3};
 		for(Integer i : starts)
